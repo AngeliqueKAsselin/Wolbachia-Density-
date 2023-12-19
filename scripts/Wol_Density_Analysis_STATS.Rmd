@@ -1,0 +1,47 @@
+---
+title: "Wolbachia_Density_Statistical_Analysis"
+author: "Angelique Asselin"
+date: "2023-09-19"
+output: html_document
+---
+## Process ## 
+1. Check assumptions 
+1a. Relationship between Wolbachia density and Time
+2. Check correlation
+3. Fit GLM - without ND/early time points 
+4. Fit GLM - with ND/early time points 
+5. Interpret results 
+
+## Assumptions Multiple linear regression ##
+
+y ~ x1 + x2 
+Virus ~ Wolbachia Density + Time
+
+Somehow need to account for the multiple independent variables (density and Time)
+(this is why it is best to keep the number of variables to a minimum if they don't account for variation)
+
+1. Normality of Residuals 
+2. Homodecacity of residuals 
+3. No outliers 
+4. Residual independence
+5. Sample size: 10 or 20x the number of independent variables VIOLATED: estimates are unstable 
+6. Multicolinearity: two independent variables that may be closely related IF VIOLATED: exclude one of the highly correlated variables. 
+7. Overfitting: The model fits perfecting to your data but is not actually predictive VIOLATED: Try to do step-wise multiple regression adding one variable at a time. 
+
+```{r Fitting the Model}
+# Final models 
+Wol_MNE_model <- lm(formula = log_MNE ~ 
+                        Line + 
+                        Titre + 
+                        Time + 
+                        Line:Time, 
+                      data = data_grow_M)
+
+
+Wol_IU_model <- lm(formula = log_IU_fly ~ 
+                       Line * 
+                       Titre * 
+                       Time, 
+                     data = data_grow_I)
+
+```

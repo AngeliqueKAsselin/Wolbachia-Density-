@@ -1,0 +1,22 @@
+
+Call:
+glm(formula = log_IU_fly ~ WOL_MNE * Time, data = data_final_stat)
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   4.012314   0.839064   4.782 1.75e-05 ***
+WOL_MNE      -0.065409   0.250810  -0.261   0.7954    
+Time          0.008906   0.003517   2.533   0.0147 *  
+WOL_MNE:Time -0.000537   0.001313  -0.409   0.6843    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 1.993967)
+
+    Null deviance: 143.134  on 50  degrees of freedom
+Residual deviance:  93.716  on 47  degrees of freedom
+  (38 observations deleted due to missingness)
+AIC: 185.76
+
+Number of Fisher Scoring iterations: 2
+

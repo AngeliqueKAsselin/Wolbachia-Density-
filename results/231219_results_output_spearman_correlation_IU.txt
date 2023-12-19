@@ -1,0 +1,10 @@
+
+	Spearman's rank correlation rho
+
+data:  data_final_stat$log_IU_fly and data_final_stat$WOL_MNE
+S = 31705, p-value = 0.001439
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+       rho 
+-0.4346075 
+

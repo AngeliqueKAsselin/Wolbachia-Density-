@@ -1,0 +1,18 @@
+
+Call:
+glm(formula = log_MNE ~ WOL_MNE, data = data_NON_DETECT)
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  -0.4603     0.3949  -1.166    0.248
+WOL_MNE      -0.1387     0.1281  -1.083    0.283
+
+(Dispersion parameter for gaussian family taken to be 2.675055)
+
+    Null deviance: 174.34  on 65  degrees of freedom
+Residual deviance: 171.20  on 64  degrees of freedom
+  (22 observations deleted due to missingness)
+AIC: 256.21
+
+Number of Fisher Scoring iterations: 2
+
